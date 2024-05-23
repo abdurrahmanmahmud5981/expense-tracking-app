@@ -104,7 +104,7 @@ expenseAmountBtn.addEventListener("click", (e) => {
         productError.innerText = "In-valid data...";
         return;
     }
-    if (parseInt(balanceAmount.innerText) <= 0) {
+    if (parseInt(balanceAmount.innerText) <= 0 || parseInt(productPrice.value)> parseInt(balanceAmount.innerText)) {
         productError.classList.remove("hide");
         productError.innerText = "Please deposit in your account...";
         depositButton.disabled = false;
